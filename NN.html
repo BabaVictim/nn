@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I AM A GOONER</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #1e2d2b;
+      color: #f2f1e8;
+    }
+
+    .intro {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: #111c18;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      z-index: 9999;
+      animation: fadeOut 2.5s ease 2s forwards;
+    }
+
+    .intro h1 {
+      font-size: 2.5rem; color: #c9a96d;
+      animation: popUp 1.5s ease;
+    }
+
+    .intro p {
+      margin-top: 10px; color: #aaa; font-size: 1.1rem;
+      animation: popUp 1.5s ease;
+    }
+
+    @keyframes popUp {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 100px auto;
+      padding: 20px;
+      background: rgba(30, 35, 32, 0.95);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      text-align: center;
+      animation: fadeIn 2s ease-out;
+    }
+
+    header {
+      background: linear-gradient(135deg, #30594f, #466d61);
+      padding: 30px;
+      border-radius: 14px 14px 0 0;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #f4ecd3;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #b9aa92;
+    }
+
+    .gallery {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .clickable-img {
+      width: 300px;
+      height: 300px;
+      border-radius: 16px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.5s ease, box-shadow 0.4s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .clickable-img:hover {
+      transform: scale(1.08);
+    }
+
+    footer {
+      background: #151d1a;
+      color: #e4d4bc;
+      padding: 20px;
+      border-radius: 0 0 14px 14px;
+      margin-top: 30px;
+      font-size: 0.95rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #1e2d2b;
+  color: #f2f1e8;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://media.discordapp.net/attachments/1338116086377480283/1354962307255631972/ChatGPT_Image_28.png?ex=67e7327c&is=67e5e0fc&hm=c90a16e2270e30bdba4b177d8ee736a431b9cf037c14a648b219124eb441b674&format=webp&quality=lossless') no-repeat center center/cover;
+  z-index: -1;
+  animation: zoomMove 40s infinite alternate ease-in-out;
+  opacity: 0.25;
+  filter: blur(2px);
+}
+
+@keyframes zoomMove {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.2) translate(-5%, -5%); }
+}
+  
+
+</style>
+</head>
+<body>
+  <!-- Intro Splash -->
+  <div class="intro">
+    <h1>I AM A GOONER</h1>
+    <p>by Nico Frey</p>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>I AM A GOONER</h1>
+      <p>ABSOLUTE CINEMA</p>
+    </header>
+    <main>
+      <div class="gallery">
+        <a href="image.html?src=1" target="_blank">
+          <img src="https://media.discordapp.net/attachments/1338116086377480283/1354962307255631972/ChatGPT_Image_28.png?ex=67e7327c&is=67e5e0fc&hm=c90a16e2270e30bdba4b177d8ee736a431b9cf037c14a648b219124eb441b674&format=webp&quality=lossless&width=350&height=350&" class="clickable-img">
+        </a>
+        <a href="image.html?src=2" target="_blank">
+          <img src="https://cdn.discordapp.com/attachments/1338116086377480283/1354968218447380713/raw.png?ex=67e737fd&is=67e5e67d&hm=0aeefc2964c3f27daf93ad47261760963019acdeb3246dcc52e42a9817f16d45&" class="clickable-img">
+        </a>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 NICO THE GOONER. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

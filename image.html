@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Viewing Image</title>
+  <style>
+    body {
+      margin: 0;
+      background: #121a18;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      animation: fadeIn 1.5s ease;
+      color: #f2f1e8;
+    }
+
+    img {
+      width: 600px;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+      transition: transform 1s ease;
+      animation: zoomIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background: #30594f;
+      color: #f4ecd3;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .back-btn:hover {
+      background: #3e6b5c;
+    }
+  </style>
+</head>
+<body>
+  <img id="mainImage" src="" alt="Viewing Gooner Image" />
+  <a href="NN.html" class="back-btn">← Return to Main Site</a>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const imageIndex = urlParams.get('src');
+    const imageMap = {
+      "1": "https://media.discordapp.net/attachments/1338116086377480283/1354962307255631972/ChatGPT_Image_28.png?ex=67e7327c&is=67e5e0fc&hm=c90a16e2270e30bdba4b177d8ee736a431b9cf037c14a648b219124eb441b674&format=webp&quality=lossless&width=600&height=600&",
+      "2": "https://cdn.discordapp.com/attachments/1338116086377480283/1354968218447380713/raw.png?ex=67e737fd&is=67e5e67d&hm=0aeefc2964c3f27daf93ad47261760963019acdeb3246dcc52e42a9817f16d45&"
+    };
+    document.getElementById("mainImage").src = imageMap[imageIndex];
+  </script>
+</body>
+</html>
